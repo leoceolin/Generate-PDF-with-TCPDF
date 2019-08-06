@@ -82,7 +82,7 @@ $pdf->lastPage();
 // ---------------------------------------------------------
 
 //Close and output PDF document
-$pdf->Output('procuracao.pdf', 'I');
+$pdf->Output('HeaderFooterImage.pdf', 'I');
 
 //============================================================+
 // END OF FILE
