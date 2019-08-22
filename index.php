@@ -1,7 +1,23 @@
 <?php
 // Include the main TCPDF library (search for installation path).
 require_once('tcpdf.php');
+require 'config.php';
 
+/*$relatorio = new Buscar();
+$getEnd = $relatorio->GetEndereco($CodEsc);
+
+$contEnd = 0;
+foreach($getEnd as $row){
+	$contEnd++;		
+}
+
+for($i = 0; $i < $contEnd; $i++){
+	$nomeEsc = $getEnd[$i]["Nome"];
+	
+	$end = $getEnd[$i]["Endereco"].' - '.$getEnd[$i]["Bairro"].' - '.$getEnd[$i]["Cidade"].' - '.$getEnd[$i]["UF"].' - CEP '.$getEnd[$i]["Cep"].' - '.$getEnd[$i]["Fone"];
+	
+}
+*/
 class MYPDF extends TCPDF {
 
     //Page header
@@ -32,8 +48,8 @@ class MYPDF extends TCPDF {
 $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('Natalia Bocchi');
-$pdf->SetTitle('Procuracao');
+$pdf->SetAuthor('Leonel Ceolin');
+$pdf->SetTitle('Title Example');
 $pdf->SetSubject('');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
